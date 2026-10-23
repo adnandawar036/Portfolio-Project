@@ -1,0 +1,292 @@
+
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080f1e;
+    color: white;
+}
+
+/* Navigation Bar */
+header {
+    border-bottom: 1px solid #263b58;
+    background: #0d172a;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span,
+h1 span,
+.about span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a,
+.text-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.text-link:hover {
+    color: #38bdf8;
+    text-shadow: 0 0 12px #38bdf877;
+}
+
+/* Navigation Buttons */
+.talk-btn,
+.btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #0284c7, #6544e8);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.talk-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 18px #38bdf855;
+}
+
+/* Main Landing Section */
+.hero {
+    max-width: 1100px;
+    min-height: 510px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subtitle {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #b7c5d8;
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-left: 18px;
+}
+
+/* Right Side Visual Card */
+.hero-visual {
+    flex: 1;
+    min-height: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 18px;
+
+    border: 1px solid #24527b;
+    border-radius: 18px;
+
+    background: radial-gradient(
+        circle at top right,
+        #173c75,
+        #111c30 65%
+    );
+
+    box-shadow: 0 0 30px #0284c722;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Blue Border Glow on Hover */
+.hero-visual:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 8px #38bdf855,
+        0 0 20px #0284c755,
+        0 0 35px #0284c722;
+
+    transform: translateY(-3px);
+}
+
+/* Code Icon */
+.code-icon {
+    font-size: 50px;
+    font-weight: bold;
+    color: #38bdf8;
+    text-shadow: 0 0 15px #38bdf855;
+}
+
+/* Picture Inside Card */
+.visual-img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #24527b;
+    display: block;
+    box-shadow: 0 5px 20px #00000040;
+    transition: 0.3s;
+}
+
+.visual-img:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px #38bdf877;
+}
+
+/* Card Heading */
+.hero-visual h2 {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.hero-visual p {
+    color: #a5b4fc;
+    font-size: 14px;
+}
+
+/* About Section */
+.about {
+    max-width: 1100px;
+    margin: 25px auto;
+    width: calc(100% - 40px);
+    text-align: center;
+    padding: 45px 20px;
+
+    background: #101b30;
+    border: 1px solid #263b58;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px #0005;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* About Section Blue Glow */
+.about:hover {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 8px #38bdf855,
+        0 0 20px #0284c755,
+        0 0 35px #0284c722;
+
+    transform: translateY(-3px);
+}
+
+.about h2 {
+    margin-bottom: 12px;
+}
+
+.about p {
+    color: #b7c5d8;
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #94a3b8;
+    border-top: 1px solid #263b58;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 700px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 20px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .visual-img {
+        max-width: 100%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .about {
+        width: calc(100% - 40px);
+    }
+}
+
+/* Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
